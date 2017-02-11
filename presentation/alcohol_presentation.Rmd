@@ -1,0 +1,59 @@
+---
+title: "Alcohol consumption in countries"
+author: "Jerome Dauge"
+date: "February 11, 2017"
+output:
+  ioslides_presentation: default
+---
+
+## Description
+
+The Shiny Application displays alcohol consumption:
+
+- for all the country in the world
+- by beverage type
+
+for the years 2000 to 2015.
+
+The data are accesible to the following [link](http://apps.who.int/gho/data/view.main.52160).
+
+
+
+## How to play with the Shiny app
+
+The Shniy app let's user select the country and select the different beverage type of alcohol.
+
+Multiples alcohol type can be selected.
+
+The final graph is a time series for the different alcohol type.
+
+
+## Example
+
+Here is an example :
+
+![](https://raw.githubusercontent.com/Fheiz/data-products-week4/master/shiny/data/capture.png "Application example ")
+
+
+
+## Dataset content
+
+Here are 10 lines of the file:
+
+```{r head-10-lines, echo=FALSE}
+data = read.csv("../shiny/data/better_beer_consumption.csv", sep=",", header=T)
+data[1310:1320, ]
+```
+
+
+## Lessons learned
+
+- Necessary to use reactive function as soon as we have 2 inputs or more.
+- Usage of uiOutput in the ui and renderUI in the server
+
+
+## Conclusion
+
+- I feel more confortable with R
+- Shiny allow us to create quickly nice application
+- Python can be a good help in order to process the data
